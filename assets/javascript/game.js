@@ -95,111 +95,101 @@ $('#yellow1').on('click', function(){
 });
 
 
-
-
-
-
-
-
-
-
-
-
 // // Player's score and adding to score
 
-// //  var yourScore = getElementById(red, blue, yellow, green.onclick(math.sum));  //
+var yourScore = getElementById(red, blue, yellow, green.onclick(math.sum));
 
 
-// var score = document.getElementById('score');
-// score.innerHTML = addScore(); 
+var score = document.getElementById('score');
+score.innerHTML = addScore(); 
 // //0
 
-// function addScore (val) {
-//     var numToAdd = parseInt(val);
-//     var currentScore = parseInt();
-//     Score.innerHTML = numToAdd + currentScore;
-// }
+function addScore (val) {
+    var numToAdd = parseInt(val);
+    var currentScore = parseInt();
+    Score.innerHTML = numToAdd + currentScore;
+}
+// end
+
+
+
+Target Number variable and random number generator
+
+var target = document.getElementById('target');
+target.innerHTML = getRandomValue();
+
+function getRandomValue (){
+    return Math.floor((Math.random() * 19) + 120);
+}
+$("#target").html(target);
+console.log(target);
 // // end
 
 
+//jewel variables and event listeners
+var red = document.getElementById('red');
+red.addEventListener('click', function() {
+    document.addToScore(red);
+    checkPlayerScore();
+});
 
-// // Target Number variable and random number generator
-
-// // var target = document.getElementById('target');
-// // target.innerHTML = getRandomValue();
-
-// // function getRandomValue (){
-// //     return Math.floor((Math.random() * 19) + 120);
-// // }
-// $("#target").html(target);
-// console.log(target);
-// // end
-
-
-// // jewel variables and event listeners
-// var red = document.getElementById('red');
-// red.addEventListener('click', function() {
-//     document.addToScore(red);
-//     checkPlayerScore();
-// });
-
-// //red.setAttribute("value", "5");
-// // console.log(red.value);
+red.setAttribute("value", "5");
+console.log(red.value);
 // //this refers to red
   
 // // end red
 
-// var blue = document.getElementById('blue');
-// blue.addEventListener('click', function() {
-//     document.addToScore(this.value);
-//     checkPlayerScore();
-// });
+var blue = document.getElementById('blue');
+blue.addEventListener('click', function() {
+    document.addToScore(this.value);
+    checkPlayerScore();
+});
 
 // // end blue
 
-// var yellow = document.getElementById('yellow');
-// yellow.addEventListener('click', function() {
-//     addToScore(this.value);
-//     checkPlayerScore();
-// });
+var yellow = document.getElementById('yellow');
+yellow.addEventListener('click', function() {
+    addToScore(this.value);
+    checkPlayerScore();
+});
 
 // // end yellow
 
-// var green = document.getElementById('green');
-// green.addEventListener('click', function() {
-//     addToScore(this.value);
-//     checkPlayerScore();
-// });
+var green = document.getElementById('green');
+green.addEventListener('click', function() {
+    addToScore(this.value);
+    checkPlayerScore();
+});
 
 // // end green
 
 
-// //var sum = parseInt(red.value) + parseInt(blue.value) + parseInt(yelow.value) + parseInt(green.value);
+var sum = parseInt(red.value) + parseInt(blue.value) + parseInt(yelow.value) + parseInt(green.value);
 
-// // console.log (sum);
+console.log (sum);
 
 // // Comparing score with target number to determine win/loss
 
-// function checkScore() {
-//     var scoreInt = parseInt(score.innerHTML);
-//     var targetInt = parseInt(target.innerHTML);
+function checkScore() {
+    var scoreInt = parseInt(score.innerHTML);
+    var targetInt = parseInt(target.innerHTML);
 
-//     if (scoreInt === targetInt) {
-//         alert('You win');
-//     }
-//     else if (scoreInt > targetInt) {
-//         alert('You lose');
-//     }
-// }
+    if (scoreInt === targetInt) {
+        alert('You win');
+    }
+    else if (scoreInt > targetInt) {
+        alert('You lose');
+    }
+}
 // // end
 
-// // function checkPlayerScore() {
-// //   //yourScore, targetScore (parseFloat() is for decimals)
-// //   var playerInt = parseInt(yourScore.innerHTML);
-// //   var targetInt = parseInt(targetScore.innerHTML);
-// //   if (playerInt === targetInt) {
-// //       alert('You win!');
-// //   } else if (playerInt > targetInt) {
-// //     alert('You lose!');
-// //   } 
+function checkPlayerScore() {
+//yourScore, targetScore (parseFloat() is for decimals)
+  var playerInt = parseInt(yourScore.innerHTML);
+  var targetInt = parseInt(targetScore.innerHTML);
+  if (playerInt === targetInt) {
+      alert('You win!');
+  } else if (playerInt > targetInt) {
+    alert('You lose!');
+  } 
 // //
