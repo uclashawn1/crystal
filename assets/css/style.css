@@ -1,13 +1,101 @@
+@import url("../css/reset.css");
 
-div{
-	background-color: white;
-	margin: 10px;
-	width: 25%
+body{
+	background-image: url("../images/blackSlats.jpeg");
+	/* background-color: black; */
+	color:#e3dac9;
+	font-family: 'Vollkorn SC', serif;
 }
-div{
-	border: solid 2px antiquewhite;
-	padding: 10px;
+
+
+
+.wrapper {
+  display: grid;
+  margin: 0 auto;
+  max-width: 940px;
+  grid-auto-columns: 25%;
+  grid-auto-rows: minmax(100px, auto);
 }
+
+#instructions{
+	font-family: 'Vollkorn', serif;
+	font-size: 18px;
+}
+
+
+.one {
+  grid-column: 1 / 5;
+  grid-row: 1;
+  text-align: center;
+  font-family: 'Vollkorn SC', serif;
+  
+}
+
+.two {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: center;
+  font-family: 'Vollkorn SC', serif;
+  height: 100px;
+}
+
+.three {
+  grid-column: 3;
+  grid-row: 2;
+  text-align: center;
+  height: 100px;
+}
+
+.four {
+  grid-column: 1 / 5;
+  grid-row: 3;
+}
+
+.crystal{
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#crystalA{
+	grid-row: 3;
+	grid-column: 1;
+
+}
+
+#crystalB{
+	grid-row: 3;
+	grid-column: 2;
+
+}
+
+#crystalC{
+	grid-row: 3;
+	grid-column: 3;
+
+}
+
+#crystalD{
+	grid-row: 3;
+	grid-column: 4;
+
+}
+
+.five {
+  grid-column: 2;
+  grid-row: 4;
+  text-align: center;
+ 
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+  text-align: center;
+  
+}
+
+
 h1, h3, span{
 	font-weight: bold;
 	text-align: center;
@@ -15,47 +103,20 @@ h1, h3, span{
 h1{
 	font-size: 30pt;
 }
-ol{
-	list-style: decimal inside; 
-}
-ul {
-	list-style: disc inside;
-	text-indent: 20px;
-}
-/* Specfic Elements*/
+
 div.header, div.gems{
 	background-color: #e0e0eb;
 }
 div.header, div.instructions{
 	width: 50%;
 }
-/* Classes */
-.numberToMatch, .winsAndLosses{
-	float: left;
-	width: 15%;
-	height: 60px;
-}
-.playerTotal{
-	width: 15%;
-	height: 60px;
-}
-.gems{
+
+.crystal{
 	clear: both;
 }
-.gemImage{
+.crystal{
 	height: 60px;
 	margin: 10px;
 }
-/* IDs */
-#blue1{
-	color: #3092c7;
-}
-#green1{
-	color: #00aa59;
-}
-#red1{
-	color: #ec4b5f;
-}
-#yellow1{
-	color: #ffc225;
-}
+
+
